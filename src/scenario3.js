@@ -4,6 +4,7 @@ import character1 from './Images/leo.png';
 //import character3 from './Images/Breeze.png';
 //import character4 from './Images/amar.png';
 import { useNavigate } from 'react-router-dom';
+import hearts from './Images/1 full life.PNG';
 
 function Scenario3({ characterName }) {
 
@@ -53,12 +54,8 @@ function Scenario3({ characterName }) {
         backgroundColor: "white",
         marginTop: "-100px",
         marginBottom: "100px",
-     
-        fontFamily: "Copperplate",
-        fontSize: "25px",
-        textDecoration: "none",
-        textTransform: "none",
-        whiteSpace: "nowrap"
+        width: "100px",
+        height: "100px"
     }
 
     const Scenario3_p2style={
@@ -94,7 +91,10 @@ function Scenario3({ characterName }) {
             <header>
                 <img style={Scenario3_imgstyle} src={character1} width="25%" height="25%" class="logo" alt="TBD Logo" />
                 <p style={Scenario3_pstyle}> Character Name{characterName} </p>
-                <p style={Scenario3_livesstyle}>Lives</p>
+                
+                <img style={Scenario3_livesstyle} src={hearts} class="lives" alt="Lives" />
+                <img style={Scenario3_livesstyle} src={hearts} class="lives" alt="Lives" />
+                <img style={Scenario3_livesstyle} src={hearts} class="lives" alt="Lives" />
             </header>
             <div>
                 <p style={Scenario3_p2style}> Leo is now in college, but he has a chance 

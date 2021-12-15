@@ -4,6 +4,7 @@ import character1 from './Images/leo.png';
 //import character3 from './Images/Breeze.png';
 //import character4 from './Images/amar.png';
 import { useNavigate } from 'react-router-dom';
+import hearts from './Images/1 full life.PNG';
 
 
 
@@ -44,12 +45,8 @@ function Endings({ characterName }) {
         backgroundColor: "white",
         marginTop: "-100px",
         marginBottom: "100px",
-     
-        fontFamily: "Copperplate",
-        fontSize: "25px",
-        textDecoration: "none",
-        textTransform: "none",
-        whiteSpace: "nowrap"
+        width: "100px",
+        height: "100px"
     }
 
     const Endings_p2style={
@@ -84,7 +81,10 @@ function Endings({ characterName }) {
             <header>
                 <img style={Endings_imgstyle} src={character1} width="25%" height="25%" class="logo" alt="TBD Logo" />
                 <p style={Endings_pstyle}> Character Name {characterName} </p>
-                <p style={Endings_livesstyle}>lives </p>
+                
+                <img style={Endings_livesstyle} src={hearts} class="lives" alt="Lives" />
+                <img style={Endings_livesstyle} src={hearts} class="lives" alt="Lives" />
+                <img style={Endings_livesstyle} src={hearts} class="lives" alt="Lives" />
             </header>
 
             <div>

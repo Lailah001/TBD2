@@ -3,6 +3,7 @@ import character1 from './Images/leo.png';
 //import character2 from './Images/attor.png';
 //import character3 from './Images/Breeze.png';
 //import character4 from './Images/amar.png';
+import hearts from './Images/1 full life.PNG';
 import { useNavigate } from 'react-router-dom';
 
 function Scenario1({ characterName }) {
@@ -53,12 +54,9 @@ function Scenario1({ characterName }) {
         backgroundColor: "white",
         marginTop: "-100px",
         marginBottom: "100px",
+        width: "100px",
+        height: "100px"
      
-        fontFamily: "Copperplate",
-        fontSize: "25px",
-        textDecoration: "none",
-        textTransform: "none",
-        whiteSpace: "nowrap"
     }
 
     const Scenario1_p2style={
@@ -94,7 +92,12 @@ function Scenario1({ characterName }) {
             <header>
                 <img style={Scenario1_imgstyle} src={character1} width="25%" height="25%" class="logo" alt="TBD Logo" />
                 <p style={Scenario1_pstyle}> Character Name{characterName} </p>
-                <p style={Scenario1_livesstyle}>Lives</p>
+
+                <img style={Scenario1_livesstyle} src={hearts} class="lives" alt="Lives" />
+                <img style={Scenario1_livesstyle} src={hearts} class="lives" alt="Lives" />
+                <img style={Scenario1_livesstyle} src={hearts} class="lives" alt="Lives" />
+
+
             </header>
             <div>
                 <p style={Scenario1_p2style}> Leo begins to attend school on another side of town, 
@@ -105,7 +108,7 @@ function Scenario1({ characterName }) {
                 <p style={Scenario1_p2style}> What would {characterName} do next? </p>
 
                 <button style={Scenario1_buttonstyle} type="button" onClick={() => navigate('/Scenario2')}>Option 1<br />
-                    Beat the living ***** out of the kid.</button>
+                    Give him a taste of his own medicine.</button>
                 <button style={Scenario1_buttonstyle} type="button" onClick={() => navigate('/Scenario2')}>Option 2<br />
                     Tell the teacher.</button>
                 <button style={Scenario1_buttonstyle} type="button" onClick={() => navigate('/Scenario2')}>Option 3<br />
