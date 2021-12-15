@@ -21,8 +21,8 @@ Misc (everything else): Team Collaboration
 * [Product Requirements Document](https://docs.google.com/document/d/1-x09Z8kJyZXvB_ZgD_usVYPDXn1HS6SLPrVc_JAKMbM/edit?usp=sharing)
 * [UI/UX Design](https://docs.google.com/presentation/d/1GvKxFtk7E1GP7ke7di8B59pWyNHUlLEKhbe82Ukt-Pk/edit?usp=sharing)
 * [Design Document](https://docs.google.com/document/d/1CoXm-F0pXGUFv2N2qcQFCGOLraZpCP6JNRrC5t45U_Y/edit?usp=sharing)
-* Testing Plan
-* Final Presentation
+* [Testing Plan](https://docs.google.com/document/d/1dmE1VTs-BblJR_aAA2fk4BB_GLe0UfWKFoVHzYgC6hY/edit?resourcekey=0-C4Qm91Vq_WYWGIRZPVjMcQ#)
+* [Final Presentation](https://docs.google.com/presentation/d/1N_Ku-7SE1PzyoB7U6UO3GxqGz49IQKR_K3LB7N5vioE/edit#slide=id.g105a737d4c6_0_58)
 
 ## *[In a few sentences, describe the main idea.]*
 TBD is a story-based game where the user can select from a given list of characters and will need to get their character from point A to B based on their character’s personality. The user is given information about their character’s personality and typical decision-making, as well as how the story begins and ends, but are not given the middle of the story. The user will need to correctly identify which choices their character would make to get from beginning to end. Users win the game by successfully completing the story from their character’s point of view.
