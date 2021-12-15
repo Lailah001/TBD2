@@ -56,47 +56,74 @@ function Login() {
      */
 
     return (
-        <img src={logo} width="25%" height="25%" class="logo" alt="TBD Logo" />
+         <body>
+            <img src={logo} width="25%" height="25%" class="logo" alt="TBD Logo" />
 
             <p> You are given the beginning and the end - the middle is TBD. </p>
+            <script <src="https://apis.google.com/js/platform.js" async defer></script>
+               
 
-            <button type="button">Login With Google.</button>
-            <script>
-                // Import the functions you need from the SDKs you need
-                import { initializeApp } from "firebase/app";
-                import { getAnalytics } from "firebase/analytics";
-                // TODO: Add SDKs for Firebase products that you want to use
-                // https://firebase.google.com/docs/web/setup#available-libraries
-
-                // Your web app's Firebase configuration
-                // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-                const firebaseConfig = {
-                  apiKey: "AIzaSyBVaSxZr9jeetVaYxs4BXPPnv3WDj9sX8c",
-                  authDomain: "tbdswe-78b59.firebaseapp.com",
-                  databaseURL: "https://tbdswe-78b59-default-rtdb.firebaseio.com",
-                  projectId: "tbdswe-78b59",
-                  storageBucket: "tbdswe-78b59.appspot.com",
-                  messagingSenderId: "399530976557",
-                  appId: "1:399530976557:web:00dfdbd50f584f3129dfa4",
-                  measurementId: "G-VSLYKYFHZY"
-                };
-
-                // Initialize Firebase
-                const app = initializeApp(firebaseConfig);
-                const analytics = getAnalytics(app);
-                document.getElementByID('login').addEventListener('click',GoogleLogin);
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <script>
+                    <script src="https://apis.google.com/js/platform.js" async defer script/>
+                <script> 
+                    src="https://apis.google.com/js/platform.js" async defer>
+                 </script>
+                <meta name="google-signin-client_id" content="147286288933-9dg60rjcujakjsesuibkhqcneq9d64o8.apps.googleusercontent.com">
+                <meta name="google-signin-cookiepolicy" content="single_host_origin">
+                <meta name="google-signin-scope" content="profile email">
                 
-                function GoogleLogin(){
-                    console.log('Login Btn Call')
-                    firebase_auth().SignInWithPopup(provider).then(res=>{
-                        console.log(res)
-                        
-                    }).catch(e=>{
-                        console.log(e)
-                    })
-                }
+                
+                import { getAuth, onAuthStateChanged, signInWithCredential, GoogleAuthProvider } from "firebase/auth";
+                const auth = getAuth();
 
-            <script>
+            function onSignIn(googleUser) {
+              console.log('Google Auth Response', googleUser);
+              // We need to register an Observer on Firebase Auth to make sure auth is initialized.
+              const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+                unsubscribe();
+                // Check if we are already signed-in Firebase with the correct user.
+                if (!isUserEqual(googleUser, firebaseUser)) {
+                  // Build Firebase credential with the Google ID token.
+                  const credential = GoogleAuthProvider.credential(
+                      googleUser.getAuthResponse().id_token);
+
+                  // Sign in with credential from the Google user.
+                  signInWithCredential(auth, credential).catch((error) => {
+                    // Handle Errors here.
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    // The email of the user's account used.
+                    const email = error.email;
+                    // The credential that was used.
+                    const credential = GoogleAuthProvider.credentialFromError(error);
+                    // ...
+                  });
+                } else {
+                  console.log('User already signed-in Firebase.');
+                }
+              });
+            }
+            import { GoogleAuthProvider } from "firebase/auth";
+
+            function isUserEqual(googleUser, firebaseUser) {
+              if (firebaseUser) {
+                const providerData = firebaseUser.providerData;
+                for (let i = 0; i < providerData.length; i++) {
+                  if (providerData[i].providerId === GoogleAuthProvider.PROVIDER_ID &&
+                      providerData[i].uid === googleUser.getBasicProfile().getId()) {
+                    // We don't need to reauth the Firebase connection.
+                    return true;
+                  }
+                }
+              }
+              return false;
+            }
+
+
+
+
+            </script>
 
         </body>
     );
