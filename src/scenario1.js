@@ -1,11 +1,11 @@
 import React from 'react';
-import character1 from './Images/TBD character.PNG';
-//import character2 from './Images/TBD character.PNG';
-//import character3 from './Images/TBD character.PNG';
-//import character4 from './Images/TBD character.PNG';
+import character1 from './Images/leo.png';
+//import character2 from './Images/attor.png';
+//import character3 from './Images/Breeze.png';
+//import character4 from './Images/amar.png';
 import { useNavigate } from 'react-router-dom';
 
-function Scenarios({ characterName }) {
+function Scenario1({ characterName }) {
 
     //change pages
     let navigate = useNavigate();
@@ -27,13 +27,14 @@ function Scenarios({ characterName }) {
      * we only want to change route to endings on the last scenario
      */
 
-    const Scenarios_imgstyle={
-        width: "100px",
+    const Scenario1_imgstyle={
+        width: "150px",
         height: "100px",
-        marginRight: "700px"
+        marginRight: "700px",
+        borderRadius: "50%"
     }
 
-    const Scenarios_pstyle={
+    const Scenario1_pstyle={
         textAlign: "center",
         color: "black",
         backgroundColor: "white",
@@ -46,7 +47,7 @@ function Scenarios({ characterName }) {
         whiteSpace: "nowrap"
     }
 
-    const Scenarios_livesstyle={
+    const Scenario1_livesstyle={
         textAlign: "center",
         color: "black",
         backgroundColor: "white",
@@ -60,7 +61,7 @@ function Scenarios({ characterName }) {
         whiteSpace: "nowrap"
     }
 
-    const Scenarios_p2style={
+    const Scenario1_p2style={
         textAlign: "center",
         color: "black",
         backgroundColor: "white",
@@ -70,10 +71,10 @@ function Scenarios({ characterName }) {
         fontSize: "25px",
         textDecoration: "none",
         textTransform: "none",
-        whiteSpace: "nowrap"
+        whiteSpace: "break-spaces"
     }
 
-    const Scenarios_buttonstyle={
+    const Scenario1_buttonstyle={
         fontFamily: "Copperplate",
         fontStyle: "normal",
         fontWeight: "normal",
@@ -84,32 +85,35 @@ function Scenarios({ characterName }) {
         padding: "20px",
 
         color: "black",
-        backgroundColor: "grey"
+        backgroundColor: "grey",
+        whiteSpace: "pre-wrap"
     }
 
     return (
         <body>
             <header>
-                <img style={Scenarios_imgstyle} src={character1} width="25%" height="25%" class="logo" alt="TBD Logo" />
-                <p style={Scenarios_pstyle}> Character Name{characterName} </p>
-                <p style={Scenarios_livesstyle}>Lives</p>
+                <img style={Scenario1_imgstyle} src={character1} width="25%" height="25%" class="logo" alt="TBD Logo" />
+                <p style={Scenario1_pstyle}> Character Name{characterName} </p>
+                <p style={Scenario1_livesstyle}>Lives</p>
             </header>
             <div>
-                <p style={Scenarios_p2style}> Beginning: Blah </p>
+                <p style={Scenario1_p2style}> Leo begins to attend school on another side of town, 
+                and most of the kids at this school don’t like outsiders.
+                 One of these kids decide to push Leo down at the playground. What should Leo do? </p>
             </div>
             <div className="options">
-                <p style={Scenarios_p2style}> What would {characterName} do next? </p>
+                <p style={Scenario1_p2style}> What would {characterName} do next? </p>
 
-                <button style={Scenarios_buttonstyle} type="button" onClick={() => navigate('/Endings')}>Option 1<br />
-                    character1.option1</button>
-                <button style={Scenarios_buttonstyle} type="button" onClick={() => navigate('/Endings')}>Option 2<br />
-                    character1.option2</button>
-                <button style={Scenarios_buttonstyle} type="button" onClick={() => navigate('/Endings')}>Option 3<br />
-                    character1.option3</button>
+                <button style={Scenario1_buttonstyle} type="button" onClick={() => navigate('/Scenario2')}>Option 1<br />
+                    Beat the living ***** out of the kid.</button>
+                <button style={Scenario1_buttonstyle} type="button" onClick={() => navigate('/Scenario2')}>Option 2<br />
+                    Tell the teacher.</button>
+                <button style={Scenario1_buttonstyle} type="button" onClick={() => navigate('/Scenario2')}>Option 3<br />
+                    Act as if nothing happened.</button>
             </div>
         </body>
     );
 
 }
 
-export default Scenarios;
+export default Scenario1;

@@ -61,7 +61,7 @@ function Login() {
 
             <p style={Login_pstyle}> You are given the beginning and the end - the middle is TBD. </p>
 
-            <button style={Login_buttonstyle} type="button">Login</button>
+            <button style={Login_buttonstyle} type="button" onClick={() => navigate('/HowToPlay')}>Start</button>
         </body>
     );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import character1 from './Images/TBD character.PNG';
-//import character2 from './Images/TBD character.PNG';
-//import character3 from './Images/TBD character.PNG';
-//import character4 from './Images/TBD character.PNG';
+import character1 from './Images/leo.png';
+//import character2 from './Images/attor.png';
+//import character3 from './Images/Breeze.png';
+//import character4 from './Images/amar.png';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -20,7 +20,7 @@ function Endings({ characterName }) {
      */
 
     const Endings_imgstyle={
-        width: "100px",
+        width: "150px",
         height: "100px",
         marginRight: "700px"
     }
