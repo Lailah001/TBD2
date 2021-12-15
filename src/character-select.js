@@ -1,9 +1,10 @@
 import React from 'react';
-import character1 from './Images/TBD character.PNG';
-import character2 from './Images/TBD character.PNG';
-import character3 from './Images/TBD character.PNG';
-import character4 from './Images/TBD character.PNG';
+import character1 from './Images/leo.png';
+import character2 from './Images/attor.png';
+import character3 from './Images/Breeze.png';
+import character4 from './Images/amar.png';
 import { useNavigate } from 'react-router-dom';
+import {leo, breeze, amar, attor} from './backendCharacter'
 
 
 
@@ -15,6 +16,15 @@ function CharacterSelection() {
     }
 
     //css styles
+
+    const imgstyle={
+        width: "170px",
+        height: "130px",
+        marginRight: "700px",
+        borderRadius: "50%",
+        marginLeft: "650px"
+    }
+
     const pstyle={
         color: "black",
         textDecoration: "underline",
@@ -57,10 +67,10 @@ function CharacterSelection() {
         <body>
             <p style={pstyle}> Select Your Character </p>
             
-            <input type="image" src={character1} /> <p style={p2style}> Character 1 </p>
-            <input type="image" src={character2} /> <p style={p2style}> Character 2 </p>
-            <input type="image" src={character3} /> <p style={p2style}> Character 3 </p>
-            <input type="image" src={character4} /> <p style={p2style}> Character 4 </p>
+            <input style={imgstyle} type="image" src={character1} /> <p style={p2style}> Leo </p>
+            <input style={imgstyle} type="image" src={character2} /> <p style={p2style}> Breeze </p>
+            <input style={imgstyle} type="image" src={character3} /> <p style={p2style}> Amar </p>
+            <input style={imgstyle} type="image" src={character4} /> <p style={p2style}> Attor </p>
 
             <button style={buttonstyle} type="button" onClick={() => navigate('/CharacterPersonality')}> Select </button>
         </body>

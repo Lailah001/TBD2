@@ -4,7 +4,9 @@ import Login from './login.js';
 import HowToPlay from './how-to-play.js';
 import CharacterSelection from './character-select.js';
 import CharacterPersonality from './character-personality.js';
-import Scenarios from './scenarios.js';
+import Scenario1 from './scenario1.js';
+import Scenario2 from './scenario2.js';
+import Scenario3 from './scenario3.js';
 import Endings from './endings.js';
 
 function App() {
@@ -18,7 +20,9 @@ function App() {
               <Route path="/HowToPlay" element={<HowToPlay />} />
               <Route path="/CharacterSelection" element={<CharacterSelection />} />
               <Route path="/CharacterPersonality" element={<CharacterPersonality />} />
-              <Route path="/Scenarios" element={<Scenarios />} />
+              <Route path="/Scenario1" element={<Scenario1 />} />
+              <Route path="/Scenario2" element={<Scenario2 />} />
+              <Route path="/Scenario3" element={<Scenario3 />} />
               <Route path="/Endings" element={<Endings />} />
               <Route path="*" element={<Navigate exact ="/" replace to="/Login" />} />
 
